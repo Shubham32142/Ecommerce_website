@@ -1,0 +1,42 @@
+.search-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+
+.user-actions {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.user-actions li {
+  margin-left: 40px;
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+.user-actions li #cart {
+  font-size: 1.2rem;
+}
+
+.user-actions li:hover {
+  color: #ffcc00;
+}
+
+.search-input {
+  margin-right: 20px;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+@media (max-width: 480px) {
+  .user-actions input {
+    margin: 10px 0;
+    justify-content: center;
+    text-align: center;
+  }
+}

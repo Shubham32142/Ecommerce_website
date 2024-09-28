@@ -1,0 +1,27 @@
+.error-page {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.error-page h1 {
+  font-size: 48px;
+  color: red;
+}
+
+.error-page p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.back-home {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.back-home:hover {
+  background-color: #0056b3;
+}
