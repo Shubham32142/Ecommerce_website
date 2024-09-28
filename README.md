@@ -1,8 +1,16 @@
-# React + Vite
+# Shoppy Globe
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to **Shoppy Globe**, your one-stop eCommerce website for exploring and purchasing a variety of products online. 
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Product Listing**: Browse through a diverse range of products with detailed descriptions and images.
+- **Shopping Cart**: Add items to your cart and manage quantities.
+- **Checkout Process**: Complete your purchase with a simple and secure checkout process.
+- **Search Functionality**: Search for products quickly using the search bar.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
+
+Thank you for using ShoppyGlobe, Hope you liked the website.
+
+
+
