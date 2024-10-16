@@ -8,8 +8,14 @@ function useProducts() {
   useEffect(() => {
     async function fetchProducts() {
       try {
-        const response = await fetch("https://dummyjson.com/products");
+        const response = await fetch("http://localhost:4000/api/allProducts");
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
         const result = await response.json();
+        console.log("Fetched products:", result);
         setProducts(result.products);
       } catch (err) {
         setError(err.message);

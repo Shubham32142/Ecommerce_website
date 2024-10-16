@@ -11,7 +11,7 @@ function ProductItem() {
   const dispatch = useDispatch();
 
   // Find the product based on the ID from the URL
-  const product = products.find((p) => p.id === parseInt(productId));
+  const product = products.find((p) => p._id === productId);
 
   if (!product) {
     return <p>Product not found</p>;
