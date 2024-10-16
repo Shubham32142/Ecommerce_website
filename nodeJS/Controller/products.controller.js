@@ -205,7 +205,7 @@ export async function Login(req, res) {
       return res.status(401).json({ message: "Wrong credentials" });
     }
     const token = jwt.sign({ id: user._id }, "secretKey", {
-      expiresIn: "15m",
+      expiresIn: "30m",
     });
     res.status(200).json(token);
   } catch (err) {
