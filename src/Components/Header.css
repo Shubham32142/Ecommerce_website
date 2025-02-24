@@ -6,7 +6,7 @@
 .container {
   position: relative;
   text-align: center;
-  background: url("./src/images/ecommerce.jpg") center center / cover no-repeat;
+  background: url("/public/ecommerce.jpg") center center / cover no-repeat;
   height: 100vh;
   display: flex;
   flex-direction: column;
