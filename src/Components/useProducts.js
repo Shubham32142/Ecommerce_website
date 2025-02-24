@@ -8,7 +8,7 @@ function useProducts() {
   useEffect(() => {
     async function fetchProducts() {
       try {
-        const response = await fetch("http://localhost:4000/api/allProducts");
+        const response = await fetch("https://ecommerce-website-backend-v5x2.onrender.com/api/allProducts");
 
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
