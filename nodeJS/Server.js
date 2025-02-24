@@ -3,7 +3,9 @@ import mongoose from "mongoose";
 import { routes } from "./Routes/products.routes.js";
 import cors from "cors";
 import { fetchAndStoreProducts } from "./Model/products.model.js";
-
+import process from "process";
+import dotenv from "dotenv";
+dotenv.config();
 const server = express();
 server.use(cors()); // Allow cross-origin requests
 server.use(express.json()); // JSON parsing for incoming requests
@@ -16,7 +18,7 @@ server.listen(port, () => {
 
 // Connect to MongoDB
 mongoose
-  .connect("mongodb://localhost:27017/Ecommerce-data")
+  .connect(process.env.MONGODB_URI)
   .then(() => {
     console.log("Database connection successful");
     fetchAndStoreProducts();

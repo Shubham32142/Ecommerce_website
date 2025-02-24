@@ -34,23 +34,24 @@ export async function fetchAndStoreProducts() {
   try {
     const response = await fetch("https://dummyjson.com/products");
     const data = await response.json();
-
-    const productsToInsert = data.products.map((product) => ({
-      title: product.title,
-      description: product.description,
-      price: product.price,
-      images: product.images[0],
-      rating: product.rating,
-    }));
-    try {
-      await productModel.insertMany(productsToInsert, { ordered: false }); // ordered: false--- Confirms that all non-duplicate products are inserted
-      console.log("Products added successfully");
-      // eslint-disable-next-line no-unused-vars
-    } catch (err) {
-      console.log("Some products were not added because of duplicates");
+    for (const product of data.products) {
+      const existingProduct = await productModel.findOne({
+        title: product.title,
+      });
+      if (!existingProduct) {
+        await productModel.create({
+          title: product.title,
+          description: product.description,
+          price: product.price,
+          images: product.images[0],
+          rating: product.rating,
+        });
+      }
     }
-  } catch (error) {
-    console.error("Error fetching and inserting products:", error);
+    console.log("Products added successfully");
+    // eslint-disable-next-line no-unused-vars
+  } catch (err) {
+    console.log("Some products were not added because of duplicates");
   }
 }
 
